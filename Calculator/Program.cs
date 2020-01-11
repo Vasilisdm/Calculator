@@ -22,5 +22,10 @@ namespace Calculator
             Console.WriteLine("\nPress enter to exit");
             Console.ReadLine();
         }
+
+        private static void DisplayResult(int result)
+        {
+            Console.WriteLine($"The result is: {result}");
+        }
     }
 }
