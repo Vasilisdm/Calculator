@@ -6,7 +6,21 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Provide the first number");
+            int number1 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Provide the second number");
+            int number2 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Provide the operation");
+            string operation = Console.ReadLine().ToUpperInvariant();
+
+            Calculator calculator = new Calculator();
+            int result = calculator.Calculate(number1, number2, operation);
+            DisplayResult(result);
+
+            Console.WriteLine("\nPress enter to exit");
+            Console.ReadLine();
         }
     }
 }
