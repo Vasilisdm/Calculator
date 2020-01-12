@@ -49,7 +49,7 @@ namespace Calculator
 
                 if (Operation != null)
                 {
-                    return message + Environment.NewLine + $"Unsupported opeartion: {Operation}";
+                    return message + Environment.NewLine + $"Unsupported operator: {Operation}";
                 }
 
                 return message;
