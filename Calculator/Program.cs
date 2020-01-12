@@ -6,6 +6,9 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
+            AppDomain currentAppDomain = AppDomain.CurrentDomain;
+            currentAppDomain.UnhandledException += new UnhandledExceptionEventHandler(HandleException);
+
             Console.WriteLine("Provide the first number");
             int number1 = int.Parse(Console.ReadLine());
 
@@ -42,6 +45,11 @@ namespace Calculator
 
             Console.WriteLine("\nPress enter to exit");
             Console.ReadLine();
+        }
+
+        private static void HandleException(object sender, UnhandledExceptionEventArgs e)
+        {
+            Console.WriteLine("There a cataclysmic error and the app was terminated!");
         }
 
         private static void DisplayResult(int result)
