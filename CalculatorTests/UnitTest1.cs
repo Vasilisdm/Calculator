@@ -1,18 +1,18 @@
 using NUnit.Framework;
+using Calculator;
 
 namespace CalculatorTests
 {
     public class Tests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
-        public void Test1()
+        public void ThrowWhenUnsupportedOperation()
         {
-            Assert.Pass();
+            // Arrange 
+            ConsoleCalculator calculator = new ConsoleCalculator();
+
+            // Act - Assert
+            Assert.That(() => calculator.Calculate(1, 2, "+"), Throws.TypeOf<CalculationOperationNotSupportedException>());
         }
     }
 }

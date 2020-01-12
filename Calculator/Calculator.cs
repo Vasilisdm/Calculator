@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Calculator
 {
-    public class Calculator
+    public class ConsoleCalculator
     {
         public int Calculate(int number1, int number2, string operation)
         {

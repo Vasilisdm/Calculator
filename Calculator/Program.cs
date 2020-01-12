@@ -18,7 +18,7 @@ namespace Calculator
             Console.WriteLine("Provide the operation");
             string operation = Console.ReadLine().ToUpperInvariant();
 
-            Calculator calculator = new Calculator();
+            ConsoleCalculator calculator = new ConsoleCalculator();
 
             try
             {
