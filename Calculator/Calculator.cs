@@ -9,7 +9,14 @@ namespace Calculator
 
             if (nonNullOperation == "/")
             {
-                return Divide(number1, number2);
+                try
+                {
+                    return Divide(number1, number2); 
+                }
+                catch (DivideByZeroException)
+                {
+                    throw;
+                }
             }
             else
             {
