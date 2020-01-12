@@ -25,10 +25,6 @@ namespace Calculator
                 int result = calculator.Calculate(number1, number2, operation);
                 DisplayResult(result);
             }
-            catch(CalculationOperationNotSupportedException ex)
-            {
-                Console.WriteLine(ex);
-            }
             catch (CalculationException ex)
             {
                 Console.WriteLine(ex);
