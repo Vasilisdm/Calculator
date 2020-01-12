@@ -5,7 +5,9 @@ namespace Calculator
     {
         public int Calculate(int number1, int number2, string operation)
         {
-            if (operation == "/")
+            string nonNullOperation = operation ?? throw new ArgumentNullException();
+
+            if (nonNullOperation == "/")
             {
                 return Divide(number1, number2);
             }
