@@ -19,12 +19,16 @@ namespace Calculator
 
             try
             {
-                int result = calculator.Calculate(number1, number2, operation);
+                int result = calculator.Calculate(number1, number2, null);
                 DisplayResult(result);
+            }
+            catch (ArgumentNullException ex) when (ex.ParamName == "operation")
+            {
+                Console.WriteLine($"Operation was not provided: {ex}");
             }
             catch (ArgumentNullException ex)
             {
-                Console.WriteLine($"Operation was not provided: {ex}");
+                Console.WriteLine($"An argument was null: {ex}");
             }
             catch (ArgumentOutOfRangeException ex)
             {
