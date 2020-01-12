@@ -22,9 +22,9 @@ namespace Calculator
                 int result = calculator.Calculate(number1, number2, operation); 
                 DisplayResult(result);
             }
-            catch
+            catch(Exception ex)
             {
-                Console.WriteLine("Sorry, something went wrong!");
+                Console.WriteLine($"Sorry, something went wrong, {ex}");
             }
 
 

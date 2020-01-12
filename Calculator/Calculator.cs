@@ -11,7 +11,7 @@ namespace Calculator
             }
             else
             {
-                throw new Exception();
+                throw new ArgumentOutOfRangeException(nameof(operation), "The mathematical operator is not supported!");
             }
         }
 
