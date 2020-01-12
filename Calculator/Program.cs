@@ -19,10 +19,18 @@ namespace Calculator
 
             try
             {
-                int result = calculator.Calculate(number1, number2, operation); 
+                int result = calculator.Calculate(number1, number2, operation);
                 DisplayResult(result);
             }
-            catch(Exception ex)
+            catch (ArgumentNullException ex)
+            {
+                Console.WriteLine($"Operation was not provided: {ex}");
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                Console.WriteLine($"Operator is not supported: {ex}");
+            }
+            catch (Exception ex)
             {
                 Console.WriteLine($"Sorry, something went wrong, {ex}");
             }
