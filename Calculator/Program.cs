@@ -16,8 +16,17 @@ namespace Calculator
             string operation = Console.ReadLine().ToUpperInvariant();
 
             Calculator calculator = new Calculator();
-            int result = calculator.Calculate(number1, number2, operation);
-            DisplayResult(result);
+
+            try
+            {
+                int result = calculator.Calculate(number1, number2, operation); 
+                DisplayResult(result);
+            }
+            catch
+            {
+                Console.WriteLine("Sorry, something went wrong!");
+            }
+
 
             Console.WriteLine("\nPress enter to exit");
             Console.ReadLine();
