@@ -13,9 +13,9 @@ namespace Calculator
                 {
                     return Divide(number1, number2); 
                 }
-                catch (DivideByZeroException)
+                catch (DivideByZeroException ex)
                 {
-                    throw;
+                    throw new ArithmeticException("An error occured during calculation.", ex);
                 }
             }
             else
